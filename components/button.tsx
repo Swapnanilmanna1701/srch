@@ -1,42 +1,12 @@
-import { motion } from 'framer-motion'
-
-const ShimmerButton = () => {
-  return (
-    <motion.button
-      className="inline-flex overflow-hidden rounded-3xl bg-[linear-gradient(120deg,#FF98A4_calc(var(--shimmer-button-x)-25%),#f6f6f6_var(--shimmer-button-x),#FF98A4_calc(var(--shimmer-button-x)+25%))] [--shimmer-button-x:0%]"
-      initial={
-        {
-          scale: 1,
-          '--shimmer-button-x': '-100%',
-        } as any
-      }
-      animate={
-        {
-          '--shimmer-button-x': '200%',
-        } as any
-      }
-      transition={{
-        stiffness: 500,
-        damping: 20,
-        type: 'spring',
-        '--shimmer-button-x': {
-          duration: 3,
-          repeat: Infinity,
-          ease: [0.445, 0.05, 0.55, 0.95],
-        },
-      }}
-      whileTap={{
-        scale: 0.95,
-      }}
-      whileHover={{
-        scale: 1.05,
-      }}
-    >
-      <span className="m-[0.125rem] rounded-3xl bg-[#7825ff] px-12  py-5 text-xs text-[#f6f6f6] backdrop-blur-sm h-7 w-">
-        Srch!
-      </span>
-    </motion.button>
-  )
-}
-
-export default ShimmerButton
+const GradientFillButton = () => {
+    return (
+      <button className="group/button relative overflow-hidden rounded-3xl border-2 border-[#ff0b85] bg-white px-12 py-2 text-md font-medium text-[#ff0b85] transition-all duration-150 hover:border-[#ffffff] active:scale-95 mr-17">
+        <span className="absolute bottom-0 left-0 z-0 h-0 w-full bg-gradient-to-t from-[#ff0b85] via-violet-500 to-cyan-300 transition-all duration-500 group-hover/button:h-full" />
+        <span className="relative z-10 transition-all duration-500 group-hover/button:text-white">
+          Srch
+        </span>
+      </button>
+    )
+  }
+  
+  export default GradientFillButton

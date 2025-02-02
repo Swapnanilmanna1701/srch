@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import TypeAnimation from "./TypeAnimation";
 import { ArrowRight } from "lucide-react";
-import ShimmerButton from "../button";
+import GradientFillButton from "../button";
 
 type TInputAreaProps = {
   promptValue: string;
@@ -21,7 +21,7 @@ const InputArea: FC<TInputAreaProps> = ({
 }) => {
   return (
     <form
-      className="mx-auto flex h-[66px] w-full items-center justify-between rounded-3xl border bg-white px-3 shadow-[2px_2px_38px_0px_rgba(255,123,0,0.25),0px_-2px_4px_0px_rgba(255,123,0,0.25)_inset,1px_2px_4px_0px_rgba(255,123,0,0.25)_inset]"
+      className="mx-auto flex h-[60px] w-full items-center justify-between rounded-3xl border-2  bg-gradient-to-r from-[#ff0b85] via-violet-500 to-cyan-300 px-3 shadow-[2px_2px_38px_0px_rgba(255,123,0,0.25),0px_-2px_4px_0px_rgba(255,123,0,0.25)_inset,1px_2px_4px_0px_rgba(255,123,0,0.25)_inset]"
       onSubmit={(e) => {
         e.preventDefault();
         if (reset) reset();
@@ -31,13 +31,13 @@ const InputArea: FC<TInputAreaProps> = ({
       <input
         type="text"
         placeholder="Ask anything"
-        className="focus-visible::outline-0 my-1 w-full pl-5 font-light not-italic leading-[normal] text-[#1B1B16]/30 text-black outline-none focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-xl"
+        className=" bg-transparent focus-visible::outline-0 my-1 w-full pl-5 font-light not-italic leading-[normal] text-[#1B1B16]/30 text-white outline-none focus-visible:ring-0 focus-visible:ring-offset-0 sm:text-xl"
         disabled={disabled}
         value={promptValue}
         required
         onChange={(e) => setPromptValue(e.target.value)}
       />
-      <ShimmerButton
+      <GradientFillButton
         disabled={disabled}
         type="submit"
         
@@ -49,7 +49,7 @@ const InputArea: FC<TInputAreaProps> = ({
         )}
 
         <ArrowRight size={24} className={`text-white ${disabled ? "invisible" : ""}`} />
-      </ShimmerButton>
+      </GradientFillButton>
     </form>
   );
 };
