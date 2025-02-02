@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 
 const Header = () => {
   return (
@@ -6,16 +6,7 @@ const Header = () => {
       <div className="grid h-full grid-cols-12">
         <div className="col-span-5"></div>
         <div className="col-span-2 flex items-center justify-center">
-          <a href="/">
-            <Image
-              unoptimized
-              src="/logo.png"
-              alt="logo"
-              width={40}
-              height={39}
-              className="h-[33px] w-[35px] lg:h-10 lg:w-10"
-            />
-          </a>
+          
         </div>
       </div>
     </div>

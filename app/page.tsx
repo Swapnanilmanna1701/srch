@@ -145,7 +145,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="absolute h-screen w-full overflow-hidden">
+      <div className="absolute h-screen bg-black w-full overflow-hidden text-white">
         <div className="relative h-screen w-full overflow-hidden">
           <div className="animate-blob absolute -left-4 top-0 h-72 w-72 rounded-full bg-orange-300 opacity-30 mix-blend-multiply blur-3xl filter"></div>
           <div className="animate-blob animation-delay-2000 absolute -right-4 top-0 h-72 w-72 rounded-full bg-yellow-300 opacity-30 mix-blend-multiply blur-3xl filter"></div>

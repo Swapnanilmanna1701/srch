@@ -6,9 +6,9 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SwiftSeek",
-  description: "SwiftSeek is a search engine for Swift documentation.",
-  metadataBase: new URL("https://swiftseek.vercel.app"),
+  title: "Srch",
+  description: "Enhance Your Searching Experiences",
+  
   icons: {
     icon: '/logo.png',
   },
