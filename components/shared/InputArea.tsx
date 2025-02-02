@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import TypeAnimation from "./TypeAnimation";
 import { ArrowRight } from "lucide-react";
+import ShimmerButton from "../button";
 
 type TInputAreaProps = {
   promptValue: string;
@@ -20,7 +21,7 @@ const InputArea: FC<TInputAreaProps> = ({
 }) => {
   return (
     <form
-      className="mx-auto flex h-[66px] w-full items-center justify-between rounded-lg border bg-white px-3 shadow-[2px_2px_38px_0px_rgba(255,123,0,0.25),0px_-2px_4px_0px_rgba(255,123,0,0.25)_inset,1px_2px_4px_0px_rgba(255,123,0,0.25)_inset]"
+      className="mx-auto flex h-[66px] w-full items-center justify-between rounded-3xl border bg-white px-3 shadow-[2px_2px_38px_0px_rgba(255,123,0,0.25),0px_-2px_4px_0px_rgba(255,123,0,0.25)_inset,1px_2px_4px_0px_rgba(255,123,0,0.25)_inset]"
       onSubmit={(e) => {
         e.preventDefault();
         if (reset) reset();
@@ -36,10 +37,10 @@ const InputArea: FC<TInputAreaProps> = ({
         required
         onChange={(e) => setPromptValue(e.target.value)}
       />
-      <button
+      <ShimmerButton
         disabled={disabled}
         type="submit"
-        className="relative flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[3px] bg-[linear-gradient(154deg,#ffa100_23.37%,#f86d00_91.91%)] disabled:pointer-events-none disabled:opacity-75"
+        
       >
         {disabled && (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -48,7 +49,7 @@ const InputArea: FC<TInputAreaProps> = ({
         )}
 
         <ArrowRight size={24} className={`text-white ${disabled ? "invisible" : ""}`} />
-      </button>
+      </ShimmerButton>
     </form>
   );
 };
