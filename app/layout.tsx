@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} overflow-x-hidden flex min-h-screen relative flex-col justify-between bg-orange-50`}
+        className={`${inter.className} overflow-x-hidden flex min-h-screen relative flex-col justify-between bg-black`}
       >
         {children}
         <Toaster />

@@ -33,7 +33,7 @@ const Hero: FC<THeroProps> = ({
       </h2>
 
       {/* input section */}
-      <div className="w-full max-w-[708px] pb-6">
+      <div className="w-full max-w-[708px] pb-0">
         <InputArea
           promptValue={promptValue}
           setPromptValue={setPromptValue}
@@ -65,18 +65,7 @@ const Hero: FC<THeroProps> = ({
       </div>
 
       {/* Github link section */}
-      <p className="text-center text-sm font-light leading-[normal] text-[#1B1B16]">
-        Fully open source!{" "}
-        <span className="text-sm font-medium underline">
-          <a
-            href="https://github.com/subhadeeproy3902/swiftseek"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Star it on github.
-          </a>
-        </span>
-      </p>
+      
     </div>
   );
 };
