@@ -12,10 +12,10 @@ export function VideoArea({
   isLoading: boolean;
 }) {
   return (
-    <div className="container h-auto w-full shrink-0 rounded-lg border border-solid border-[#C2C2C2] bg-white p-5 lg:p-10">
+    <div className="container text-white h-auto w-full shrink-0 rounded-lg border border-solid border-[#C2C2C2] bg-gradient-to-r from-[#ff0b85] via-violet-500 to-cyan-300 p-5 lg:p-10">
       <div className="flex items-start gap-4 pb-3 lg:pb-3.5">
         <Video size={24} />
-        <h3 className="text-base font-bold uppercase leading-[152.5%] text-black">
+        <h3 className="text-base font-bold uppercase leading-[152.5%] text-white">
           Videos:{" "}
         </h3>
       </div>
@@ -33,7 +33,7 @@ export function VideoArea({
               href={video.url}
               target="_blank"
               key={index}
-              className="flex items-start gap-6 p-6 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors border border-gray-100 dark:border-gray-800"
+              className="flex items-start gap-6 p-6 bg-black hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors border border-gray-100 dark:border-gray-800 text-white"
             >
               <div className="relative w-20 h-20 flex-shrink-0">
                 <Image
@@ -44,10 +44,10 @@ export function VideoArea({
                 />
               </div>
               <div className="min-w-0 space-y-2">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 break-words">
+                <h3 className="text-lg font-medium text-white dark:text-gray-100 break-words">
                   {video.name}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400 break-all">
+                <p className="text-xs text-blue-500 dark:text-gray-400 break-all">
                   {video.url}
                 </p>
               </div>
