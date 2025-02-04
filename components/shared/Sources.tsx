@@ -10,7 +10,7 @@ export default function Sources({
   isLoading: boolean;
 }) {
   return (
-    <div className="container h-auto w-full shrink-0 rounded-lg border border-solid border-[#ffe5c1] bg-white p-5 lg:p-10">
+    <div className="container h-auto w-full shrink-0 rounded-lg border-2 border-solid border-violet-500 bg-gradient-to-r from-[#ff0b85] via-violet-500 to-cyan-300 p-5 lg:p-10">
       <div className="flex items-start gap-4 pb-3 lg:pb-3.5">
         <Eye size={24} />
         <h3 className="text-base font-bold uppercase leading-[152.5%] text-black">
