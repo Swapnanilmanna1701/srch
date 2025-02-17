@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import InputArea from "./InputArea";
+import Orb from "@/components/orb";
 
 type THeroProps = {
   promptValue: string;
@@ -28,6 +29,14 @@ const Hero: FC<THeroProps> = ({
           Together AI, Tavily and more
         </span>
       </a>
+      <div style={{ width: "100%", height: "500px", position: "relative" }}>
+        <Orb
+          hoverIntensity={0.5}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
+        />
+      </div>
       <h2 className="bg-gradient-to-r from-amber-500 via-orange-600 to-amber-500 bg-clip-text text-transparent pb-7 pt-2 opacity-100 saturate-200 text-center text-3xl font-semibold leading-[normal] lg:text-[64px] drop-shadow-2xl">
         Search smarter & faster
       </h2>
@@ -65,7 +74,6 @@ const Hero: FC<THeroProps> = ({
       </div>
 
       {/* Github link section */}
-      
     </div>
   );
 };

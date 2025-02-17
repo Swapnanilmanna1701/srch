@@ -172,12 +172,12 @@ export default function Home() {
                 <div className="container space-y-2">
                   <div className="container flex w-full items-start gap-3 px-5 pt-2 lg:px-10">
                     <div className="flex w-fit items-center gap-4">
-                      <CircleHelp size={24} />
-                      <p className="pr-5 font-bold uppercase leading-[152%] text-black">
+                      <CircleHelp size={24} className="text-white" />
+                      <p className="pr-5 text-white font-bold uppercase leading-[152%]">
                         Question:
                       </p>
                     </div>
-                    <div className="grow">&quot;{question}&quot;</div>
+                    <div className="grow text-white">&quot;{question}&quot;</div>
                   </div>
                   <>
                     <Sources sources={sources} isLoading={isLoadingSources} />
