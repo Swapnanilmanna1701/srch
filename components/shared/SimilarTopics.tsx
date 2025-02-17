@@ -11,11 +11,11 @@ const SimilarTopics = ({
   reset: () => void;
 }) => {
   return (
-    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-[#ffe5c1] bg-white p-5 lg:p-10">
+    <div className="container flex h-auto w-full shrink-0 gap-4 rounded-lg border border-solid border-white bg-gradient-to-r from-pink-600 to-cyan-300 via-violet-500 p-5 lg:p-10">
       <div className="flex-1 divide-y divide-[#E5E5E5]">
-        <div className="flex gap-4 pb-3">
+        <div className="flex gap-4 pb-3 text-white">
           <ThumbsUp size={24} />
-          <h3 className="text-base font-bold uppercase text-black">
+          <h3 className="text-base font-bold uppercase text-white">
             Similar topics:{" "}
           </h3>
         </div>
@@ -31,10 +31,10 @@ const SimilarTopics = ({
                   handleDisplayResult(item);
                 }}
               >
-                <div className="flex items-center">
+                <div className="flex items-center text-cyan-300">
                   <ArrowUpRight size={24} />
                 </div>
-                <p className="text-sm font-light leading-[normal] text-[#1B1B16] text-left">
+                <p className="text-sm font-bold leading-[normal] text-white  text-left">
                   {item}
                 </p>
               </button>
