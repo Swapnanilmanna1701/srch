@@ -1,12 +1,61 @@
-const GradientFillButton = () => {
-    return (
-      <button className="group/button relative overflow-hidden rounded-3xl border-2 border-[#ff0b85] bg-white px-12 py-2 text-md font-medium text-[#ff0b85] transition-all duration-150 hover:border-[#ffffff] active:scale-95 mr-17">
-        <span className="absolute bottom-0 left-0 z-0 h-0 w-full bg-gradient-to-t from-[#ff0b85] via-violet-500 to-cyan-300 transition-all duration-500 group-hover/button:h-full" />
-        <span className="relative z-10 transition-all duration-500 group-hover/button:text-white">
-          Srch
-        </span>
+import React from 'react';
+import styled from 'styled-components';
+
+const AIButton = () => {
+  return (
+    <StyledWrapper>
+      <button>
+        <span className="text">Search</span>
       </button>
-    )
+    </StyledWrapper>
+  );
+}
+
+const StyledWrapper = styled.div`
+  button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 30px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 130px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
   }
-  
-  export default GradientFillButton
+
+  button:active,
+  button:hover {
+    outline: 0;
+  }
+
+  button span {
+    background-color: rgb(5, 6, 45);
+    padding: 13px 8px;
+    border-radius: 30px;
+    width: 100%;
+    height: 80%;
+    transition: 300ms;
+  }
+
+  button:hover span {
+    background: none;
+  }
+
+  button:active {
+    transform: scale(0.9);
+  }`;
+
+export default AIButton;

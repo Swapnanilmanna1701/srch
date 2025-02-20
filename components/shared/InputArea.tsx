@@ -1,8 +1,10 @@
-import Image from "next/image";
+//import Image from "next/image";
 import { FC } from "react";
 import TypeAnimation from "./TypeAnimation";
 import { ArrowRight } from "lucide-react";
-import GradientFillButton from "../button";
+//import GradientFillButton from "../button";
+import AIButton from "../button";
+//import Input from "@/components/input"
 
 type TInputAreaProps = {
   promptValue: string;
@@ -21,7 +23,7 @@ const InputArea: FC<TInputAreaProps> = ({
 }) => {
   return (
     <form
-      className="mx-auto flex h-[60px] w-full items-center justify-between rounded-3xl border-2  bg-gradient-to-r from-[#ff0b85] via-violet-500 to-cyan-300 px-3 shadow-[2px_2px_38px_0px_rgba(255,123,0,0.25),0px_-2px_4px_0px_rgba(255,123,0,0.25)_inset,1px_2px_4px_0px_rgba(255,123,0,0.25)_inset]"
+      className="mx-auto flex h-[70px] w-full items-center justify-between rounded-3xl border border-blue-500 border-b-blue-600 bg- px-3 "
       onSubmit={(e) => {
         e.preventDefault();
         if (reset) reset();
@@ -37,7 +39,7 @@ const InputArea: FC<TInputAreaProps> = ({
         required
         onChange={(e) => setPromptValue(e.target.value)}
       />
-      <GradientFillButton
+      <AIButton
         disabled={disabled}
         type="submit"
         
@@ -49,7 +51,7 @@ const InputArea: FC<TInputAreaProps> = ({
         )}
 
         <ArrowRight size={24} className={`text-white ${disabled ? "invisible" : ""}`} />
-      </GradientFillButton>
+      </AIButton>
     </form>
   );
 };
