@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import * as React from "react";
 import Image from "next/image";
 import { ImagePlus } from "lucide-react";
+import Loader from "@/components/loader";
 import {
   Carousel,
   CarouselContent,
@@ -50,12 +51,8 @@ export function ImageCarousel({
       <div className="flex w-full max-w-[890px] flex-wrap justify-center content-center items-center gap-[15px]">
         {isLoading ? (
           <>
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-20 w-[260px] max-w-sm animate-pulse rounded-md bg-gray-300" />
+            <Loader />
+            
           </>
         ) : items.length > 0 ? (
           <>

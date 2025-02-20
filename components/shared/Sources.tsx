@@ -22,11 +22,7 @@ export default function Sources({
         {isLoading ? (
           <>
             <Loader />
-            <Loader />
-            <Loader />
-            <Loader />
-            <Loader />
-            <Loader />
+            
           </>
         ) : sources.length > 0 ? (
           sources.map((source, index) => (

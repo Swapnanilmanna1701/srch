@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Video } from "lucide-react";
+import Loader from "@/components/loader"
 import Link from "next/link";
 
 export function VideoArea({
@@ -19,13 +20,10 @@ export function VideoArea({
           Videos:{" "}
         </h3>
       </div>
-      <div className="max-w-5xl justify-center items-centerw-full grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+      <div className="max-w-5xl content-center justify-center items-center w-full grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
         {isLoading ? (
           <>
-            <div className="h-24 mx-auto w-full max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-24 mx-auto w-full max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-24 mx-auto w-full max-w-sm animate-pulse rounded-md bg-gray-300" />
-            <div className="h-24 mx-auto w-full max-w-sm animate-pulse rounded-md bg-gray-300" />
+            <Loader />
           </>
         ) : videos.length > 0 ? (
           videos.map((video, index) => (

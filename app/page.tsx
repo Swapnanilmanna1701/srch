@@ -186,7 +186,7 @@ export default function Home() {
                       isLoading={isLoadingSources}
                     />
                     <VideoArea videos={ytVideos} isLoading={isLoadingSources} />
-                    <Answer answer={answer} />
+                    
                     <SimilarTopics
                       similarQuestions={similarQuestions}
                       handleDisplayResult={handleDisplayResult}
@@ -197,15 +197,7 @@ export default function Home() {
 
                 <div className="pt-1 sm:pt-2" ref={chatContainerRef}></div>
               </div>
-              <div className="container px-4 lg:px-0 pb-8">
-                <InputArea
-                  promptValue={promptValue}
-                  setPromptValue={setPromptValue}
-                  handleDisplayResult={handleDisplayResult}
-                  disabled={loading}
-                  reset={reset}
-                />
-              </div>
+              
             </div>
           )}
         </main>
