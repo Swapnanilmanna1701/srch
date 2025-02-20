@@ -7,7 +7,7 @@ import Hero from "@/components/shared/Hero";
 import InputArea from "@/components/shared/InputArea";
 import SimilarTopics from "@/components/shared/SimilarTopics";
 import Sources from "@/components/shared/Sources";
-import Image from "next/image";
+//import Image from "next/image";
 import { useRef, useState } from "react";
 import {
   createParser,

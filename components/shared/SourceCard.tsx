@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SourceCard = ({ source }: { source: SearchResult }) => {
   return (
-    <div className="flex h-[79px] w-full items-center gap-2.5 rounded border border-solid border-white bg-black px-1.5 py-1 md:w-auto">
+    <div className="flex h-[79px] w-full items-center gap-2.5 rounded border border-solid border-white bg-white px-1.5 py-1 md:w-auto">
       <div className="">
         <Image
           unoptimized
@@ -14,7 +14,7 @@ const SourceCard = ({ source }: { source: SearchResult }) => {
         />
       </div>
       <div className="flex max-w-[192px] flex-col justify-center gap-[7px]">
-        <h6 className="line-clamp-2 text-sm font-light leading-[normal] text-white">
+        <h6 className="line-clamp-2 text-sm font-light leading-[normal] text-black">
           {source.title}
         </h6>
         <a
